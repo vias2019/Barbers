@@ -1,0 +1,9 @@
+In your README, include a paragraph or two comparing the RPC and message-passing concurrency abstractions (as implemented in this assignment and your Sleeping Barbers solution). Also include a brief discussion of how you would modify your server and client library to handle concurrent requests.
+
+Message passing is a type of communication between processes executed on the same physical unit; while Remote Procedure Call (RPC) executes processes in a different address location. RPC is often referred as client/server relationship.
+In my assignment I used the same phisical unit to send and receive messages. So, I created a thread for the server only; the client used the primary thread.  
+Should my program handle concurrent request, I would have to use signals/semaphores and mutex lock/unlock functions in the code.
+
+~ Viktoriya Grishkina
+
+P.S. getrandom(2) didn't work on UW Linux machine, so I used other methods to get a random number.
